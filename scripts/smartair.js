@@ -98,10 +98,10 @@ function generateSmartAirCard(startSector, keyA) {
     for (let i = 0; i < 40; i++) {
         if (i == 0) {
             //Header block...
-            dat += "0B0227DFF118020001AB659E17B4CF1D"
-            dat += "6F015190519000000000000000000000"
+            dat += "968B54145D880400C844002000000018"
             dat += "00000000000000000000000000000000"
-            dat += "A0A1A2A3A4A5787788C10D258FE90296"
+            dat += "00000000000000000000000000000000"
+            dat += "FFFFFFFFFFFFFF078069FFFFFFFFFFFF"
         } else if (i == startSector) {
             dat += generateStartSector(keyA, uocBlock)
         } else if (i == startSector+1) {
