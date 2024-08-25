@@ -55,7 +55,7 @@ function generateUocSector(keyA, startSector) {
     const systemID = keyA.substring(4, 12)
     //280{log_block_start:04x}0001E00000{door_block_start:02x}0{num_doors:04x}00000000
     
-    const block0 = `28000100001E00000${doorBlockStart}000CC00000000`
+    const block0 = `28000100001E00000${doorBlockStart}0034800000000`
     data += block0
     data += block0
     data += "00000000000000002DBD06A600000000"
