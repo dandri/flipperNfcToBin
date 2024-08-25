@@ -34,8 +34,8 @@ function generateStartSector(keyA, uocBlock) {
     const uocBlockStr = `${uocBlock.toString(16).padStart(4, '0')}`
     let data = ""
     const systemID = keyA.substring(4, 12)
-    data += `181e${systemID}60f001002abca0f5002a`
-    data += `bc982acc98ffffff850${uocBlockStr}000000000`
+    data += `181e${systemID}00FAF8FF2ABC06A5002A`
+    data += `BC983E4C982345AA850${uocBlockStr}000000000`
     data += "00000000000000000000000000000000"
     data += trailer
     //console.log(data)
@@ -55,7 +55,7 @@ function generateUocSector(keyA, startSector) {
     const systemID = keyA.substring(4, 12)
     //280{log_block_start:04x}0001E00000{door_block_start:02x}0{num_doors:04x}00000000
     
-    const block0 = `28000000001E00000${doorBlockStart}0ffff00000000`
+    const block0 = `28000100001E00000${doorBlockStart}000CC00000000`
     data += block0
     data += block0
     data += "00000000000000002DBD06A600000000"
